@@ -1,9 +1,7 @@
 package com.tin19.test_projekt.controller;
 
 import com.tin19.test_projekt.model.Drucker;
-import com.tin19.test_projekt.model.Person;
 import com.tin19.test_projekt.service.DruckerService;
-import com.tin19.test_projekt.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,13 +23,13 @@ public class DruckerController {
         return druckerService.save_mehrere_Drucker(druckers);
     }
 
-    @GetMapping("findAllDrucker")
+    @GetMapping("/findAllDrucker")
     public List<Drucker> findAllPerson() {
         return druckerService.getAllDrucker();
     }
 
 
-    @GetMapping("findDrucker/{d_id}")      //Dies bei Postman eingeben.
+    @GetMapping("/findDrucker/{d_id}")      //Dies bei Postman eingeben.
     public Drucker findDruckerById(@PathVariable long d_id){
         return druckerService.getDruckerById(d_id);
     }

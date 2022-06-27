@@ -2,15 +2,17 @@ package com.tin19.test_projekt.service;
 
 
 import com.tin19.test_projekt.model.Drucker;
-import com.tin19.test_projekt.model.Drucker;
 import com.tin19.test_projekt.repository.DruckerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
+
 
 import java.util.List;
 
 @Service
 public class DruckerService {
+    @Autowired
     private DruckerRepository druckerRepository;
 
     public Drucker saveDrucker(Drucker drucker){
